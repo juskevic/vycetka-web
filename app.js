@@ -23,10 +23,10 @@ function calculateTotals() {
             case 'countEuro': total = value * 22; break;
         }
 
-        totalCell.textContent = total;
+        totalCell.textContent = `${total} Kč`;
         grandTotal += total;
     });
-    totalAll.textContent = grandTotal;
+    totalAll.textContent = `${grandTotal} Kč`;
 }
 
 inputs.forEach(input => {
