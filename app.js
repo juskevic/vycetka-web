@@ -1,40 +1,36 @@
-/*MAIN SECTION*/
-function calculateTotal(denomination, countInputId, totalId) {
-  const count = document.getElementById(countInputId).value;
-  const total = count * denomination;
-  document.getElementById(totalId).textContent = total;
+const inputs = document.querySelectorAll('.form-control');
+const totalAll = document.getElementById('totalAll');
+
+function calculateTotals() {
+    let grandTotal = 0;
+    inputs.forEach(input => {
+        const id = input.id;
+        const value = parseInt(input.value) || 0; // Get the input value or 0 if it's empty
+        const totalCell = document.getElementById(`total${id.replace('count', '')}`);
+        let total = 0;
+
+        switch (id) {
+            case 'count2000': total = value * 2000; break;
+            case 'count1000': total = value * 1000; break;
+            case 'count500': total = value * 500; break;
+            case 'count200': total = value * 200; break;
+            case 'count100': total = value * 100; break;
+            case 'count50': total = value * 50; break;
+            case 'count20': total = value * 20; break;
+            case 'count10': total = value * 10; break;
+            case 'count5': total = value * 5; break;
+            case 'count2': total = value * 2; break;
+            case 'countEuro': total = value * 22; break;
+        }
+
+        totalCell.textContent = total;
+        grandTotal += total;
+    });
+    totalAll.textContent = grandTotal;
 }
 
-document.getElementById('count2000').addEventListener('input', function () {
-  calculateTotal(2000, 'count2000', 'total2000');
+inputs.forEach(input => {
+    input.addEventListener('input', calculateTotals);
 });
-document.getElementById('count1000').addEventListener('input', function () {
-  calculateTotal(1000, 'count1000', 'total1000');
-});
-document.getElementById('count500').addEventListener('input', function () {
-  calculateTotal(500, 'count500', 'total500');
-});
-document.getElementById('count200').addEventListener('input', function () {
-  calculateTotal(200, 'count200', 'total200');
-});
-document.getElementById('count100').addEventListener('input', function () {
-  calculateTotal(100, 'count100', 'total100');
-});
-document.getElementById('count50').addEventListener('input', function () {
-  calculateTotal(50, 'count50', 'total50');
-});
-document.getElementById('count20').addEventListener('input', function () {
-  calculateTotal(20, 'count20', 'total20');
-});
-document.getElementById('count10').addEventListener('input', function () {
-  calculateTotal(10, 'count10', 'total10');
-});
-document.getElementById('count5').addEventListener('input', function () {
-  calculateTotal(5, 'count5', 'total5');
-});
-document.getElementById('count2').addEventListener('input', function () {
-  calculateTotal(2, 'count2', 'total2');
-});
-document.getElementById('countEuro').addEventListener('input', function () {
-  calculateTotal(22, 'countEuro', 'totalEuro');
-})
+
+calculateTotals();
