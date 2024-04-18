@@ -1,3 +1,4 @@
+/* Calculating logic */
 const inputs = document.querySelectorAll('.form-control');
 const totalAll = document.getElementById('totalAll');
 
@@ -5,7 +6,7 @@ function calculateTotals() {
     let grandTotal = 0;
     inputs.forEach(input => {
         const id = input.id;
-        const value = parseInt(input.value) || 0; // Get the input value or 0 if it's empty
+        const value = parseInt(input.value) || 0;
         const totalCell = document.getElementById(`total${id.replace('count', '')}`);
         let total = 0;
 
@@ -20,6 +21,7 @@ function calculateTotals() {
             case 'count10': total = value * 10; break;
             case 'count5': total = value * 5; break;
             case 'count2': total = value * 2; break;
+            case 'count1': total = value * 1; break;
             case 'countEuro': total = value * 22; break;
         }
 
@@ -27,10 +29,14 @@ function calculateTotals() {
         grandTotal += total;
     });
     totalAll.textContent = `${grandTotal} Kč`;
+    if (grandTotal === 8000) {
+        totalAll.innerHTML = '<td class="col-4 fw-bold" id="totalAll" style="color: green;"></td>';
+        totalAll.textContent = `${grandTotal} Kč`;
+    }
 }
-
 inputs.forEach(input => {
     input.addEventListener('input', calculateTotals);
 });
 
 calculateTotals();
+
