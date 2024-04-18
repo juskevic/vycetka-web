@@ -1,11 +1,10 @@
-// Function to calculate and display total for a given denomination
+/*MAIN SECTION*/
 function calculateTotal(denomination, countInputId, totalId) {
   const count = document.getElementById(countInputId).value;
   const total = count * denomination;
   document.getElementById(totalId).textContent = total;
 }
 
-// Add event listeners to each count input
 document.getElementById('count2000').addEventListener('input', function() {
   calculateTotal(2000, 'count2000', 'total2000');
 });
@@ -36,3 +35,6 @@ document.getElementById('count5').addEventListener('input', function() {
 document.getElementById('count2').addEventListener('input', function() {
   calculateTotal(2, 'count2', 'total2');
 });
+document.getElementById('countEuro').addEventListener('input', function () {
+  calculateTotal(22, 'countEuro', 'totalEuro');
+})
