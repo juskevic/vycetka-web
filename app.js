@@ -55,8 +55,10 @@ function calculateTotals() {
     });
     if (grandTotal === 8000) {
         totalAll.style.color = 'green';
+        totalAll.style.fontWeight = 'bold';
     } else {
         totalAll.style.color = '';
+        totalAll.style.fontWeight = 'normal';
     }
 
     if (grandTotal < 8000) {
