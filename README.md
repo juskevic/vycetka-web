@@ -17,7 +17,7 @@ This is an accounting tool that allows you to count the amount of banknotes and 
 
 Version 0.1
 
-![demo-v0.1.png](img%2Fdemo-v0.1.png)
+![demo-v0.1.png](img/demo-v0.1.png)
 
 
 ## Authors
