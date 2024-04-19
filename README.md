@@ -12,15 +12,3 @@ This is an accounting tool that allows you to count the amount of banknotes and 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
-
-## Demo
-
-Version 0.1
-
-![demo-v0.1.png](img/demo-v0.1.png)
-
-
-## Authors
-
-- [@makuyoshi](https://www.github.com/makuyoshi)
-
