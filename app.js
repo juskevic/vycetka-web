@@ -1,6 +1,7 @@
 /* Calculating logic */
 const inputs = document.querySelectorAll('.form-control');
 const totalAll = document.getElementById('totalAll');
+const minus8000 = document.getElementById('minus8000');
 
 function calculateTotals() {
     let grandTotal = 0;
@@ -57,6 +58,13 @@ function calculateTotals() {
     } else {
         totalAll.style.color = '';
     }
+
+    if (grandTotal < 8000) {
+        minus8000.textContent = "0 Kč"
+    } else {
+        minus8000.textContent = `${grandTotal - 8000} Kč`
+    }
+
     totalAll.textContent = `${grandTotal} Kč`;
 }
 
