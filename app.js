@@ -5,6 +5,7 @@ const minus8000 = document.getElementById('minus8000');
 
 function calculateTotals() {
     let grandTotal = 0;
+    let countEuroValue = 0;
     inputs.forEach(input => {
         const id = input.id;
         const value = parseInt(input.value) || 0;
@@ -47,22 +48,25 @@ function calculateTotals() {
                 break;
             case 'countEuro':
                 total = value * 22;
+                countEuroValue = total;
                 break;
         }
 
         totalCell.textContent = `${total} Kč`;
         grandTotal += total;
     });
+
     if (grandTotal === 8000) {
         totalAll.style.color = 'green';
         totalAll.style.fontWeight = 'bold';
     } else {
         totalAll.style.color = '';
-        totalAll.style.fontWeight = 'normal';
     }
 
     if (grandTotal < 8000) {
         minus8000.textContent = "0 Kč"
+    } else if (countEuroValue !== 0) {
+        minus8000.textContent = `${grandTotal - 8000} Kč` // Add separate logic here later
     } else {
         minus8000.textContent = `${grandTotal - 8000} Kč`
     }
