@@ -70,6 +70,7 @@ function calculateTotals() {
         minus8000.style.fontSize = "15px"
     } else {
         minus8000.textContent = `${grandTotal - 8000} Kč`
+        minus8000.style.fontSize = ""
     }
 
     totalAll.textContent = `${grandTotal} Kč`;
