@@ -1,7 +1,26 @@
-/* Calculating logic */
 const inputs = document.querySelectorAll('.form-control');
 const totalAll = document.getElementById('totalAll');
 const minus8000 = document.getElementById('minus8000');
+
+function saveInputValues() {
+    const inputValues = {};
+    inputs.forEach(input => {
+        inputValues[input.id] = input.value;
+    });
+    localStorage.setItem('inputValues', JSON.stringify(inputValues));
+}
+
+function loadInputValues() {
+    const savedValues = localStorage.getItem('inputValues');
+    if (savedValues) {
+        const inputValues = JSON.parse(savedValues);
+        inputs.forEach(input => {
+            if (inputValues.hasOwnProperty(input.id)) {
+                input.value = inputValues[input.id];
+            }
+        });
+    }
+}
 
 function calculateTotals() {
     let grandTotal = 0;
@@ -74,7 +93,12 @@ function calculateTotals() {
     }
 
     totalAll.textContent = `${grandTotal} Kč`;
+
+    saveInputValues();
+
 }
+
+loadInputValues()
 
 inputs.forEach(input => {
     input.addEventListener('input', calculateTotals);
