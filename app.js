@@ -98,11 +98,23 @@ function calculateTotals() {
 
 }
 
+function resetValues() {
+    inputs.forEach(input => {
+        input.value = 0;
+    });
+
+    localStorage.removeItem('inputValues');
+
+    calculateTotals();
+}
+
 loadInputValues()
 
 inputs.forEach(input => {
     input.addEventListener('input', calculateTotals);
 });
+
+document.getElementById('resetButton').addEventListener('click', resetValues);
 
 calculateTotals();
 
