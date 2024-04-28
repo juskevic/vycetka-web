@@ -100,7 +100,7 @@ function calculateTotals() {
 
 function resetValues() {
     inputs.forEach(input => {
-        input.value = 0;
+        input.value = ""; /* Making this a string could break things! */
     });
 
     localStorage.removeItem('inputValues');
