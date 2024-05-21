@@ -85,8 +85,7 @@ function calculateTotals() {
     if (grandTotal < 8000) {
         minus8000.textContent = "0 Kč"
     } else if (countEuroValue !== 0) {
-        minus8000.textContent = `${(grandTotal - 8000) - countEuroValue} Kč + ${countEuroValue / 22} €  `;
-        minus8000.style.fontSize = "15px"
+        minus8000.innerHTML = `${(grandTotal - 8000) - countEuroValue} Kč <br>+ ${countEuroValue / 22} €  `;
     } else {
         minus8000.textContent = `${grandTotal - 8000} Kč`
         minus8000.style.fontSize = ""
