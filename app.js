@@ -94,6 +94,14 @@ function calculateTotals() {
 
     totalAll.textContent = `${grandTotal} Kč`;
 
+    const coinErrorMsg = document.getElementById('not-enough-coins-or-bank-notes');
+
+    if (document.getElementById('count20').value < 15 && document.getElementById('count20').value !== "") {
+        coinErrorMsg.innerHTML = 'V pokladně je málo 20Kč ⚠️ <br> Měly by se nafasovat.';
+    } else {
+        coinErrorMsg.textContent = ""
+    }
+
     saveInputValues();
 
 }
