@@ -80,6 +80,7 @@ function calculateTotals() {
         totalAll.style.fontWeight = 'bold';
     } else {
         totalAll.style.color = '';
+        totalAll.style.fontWeight = '';
     }
 
     if (grandTotal < 8000) {
