@@ -7,6 +7,6 @@
     src: url("../../public/fonts/DigitalCards-Demo.ttf");
 }
 
-h1 {
+#vycetka-header {
     font-family: "DigitalCards", sans-serif;
 }

@@ -1,115 +1,105 @@
 import React from "react";
-import Image from "next/image";
-import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function PrivacyPage() {
+
+    const mainHeaderStyling = "";
+
     return (
-        <TracingBeam className="px-6">
-            <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-                {dummyContent.map((item, index) => (
-                    <div key={`content-${index}`} className="mb-10">
-                        <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-                            {item.badge}
-                        </h2>
-
-                        <p className={twMerge("text-xl mb-4")}>
-                            {item.title}
-                        </p>
-
-                        <div className="text-sm  prose prose-sm dark:prose-invert">
-                            {item?.image && (
-                                <Image
-                                    src={item.image}
-                                    alt="blog thumbnail"
-                                    height="1000"
-                                    width="1000"
-                                    className="rounded-lg mb-10 object-cover"
-                                />
-                            )}
-                            {item.description}
+        <div className="bg-black">
+            <TracingBeam>
+                <div className="flex justify-center max-w-2xl mx-auto p-12 text-gray-200">
+                    <div className="flex flex-col gap-7 flex-wrap">
+                        <div>
+                            <h1>Zásady ochrany osobních údajů</h1>
+                            <p>Poslední aktualizace: <span>{new Date().toLocaleDateString('cs-CZ')}</span></p>
+                        </div>
+                        <div>
+                            <h2>Úvod</h2>
+                            <p>Vítejte ve Výčetce! Já, Max Juškevič, si cením vašeho soukromí a zavazuji se chránit vaše
+                                osobní údaje. Tyto zásady ochrany osobních údajů popisují typy informací, které
+                                neshromažďuji, a způsob, jakým používám a chráním vaše data. Používáním mé aplikace
+                                souhlasíte s postupy popsanými v těchto zásadách.</p>
+                        </div>
+                        <div>
+                            <h2>Shromažďování a používání údajů</h2>
+                            <h3>Žádné shromažďování údajů</h3>
+                            <p>Výčetka neshromažďuje, neukládá ani nezpracovává žádné osobní údaje uživatelů. Aplikace
+                                je navržena tak, aby fungovala bez přístupu k jakýmkoli uživatelským informacím, což
+                                zajišťuje úplné soukromí a anonymitu.</p>
+                        </div>
+                        <div>
+                            <h2>Služby třetích stran</h2>
+                            <p>Protože Výčetka neshromažďuje žádná data, neintegruje se ani nepoužívá žádné služby
+                                třetích stran, které by mohly shromažďovat nebo zpracovávat osobní údaje.</p>
+                        </div>
+                        <div>
+                            <h2>Zabezpečení údajů</h2>
+                            <h3>Ochrana uživatelských údajů</h3>
+                            <p>I když Výčetka neshromažďuje osobní údaje, zavazuji se dodržovat nejvyšší standardy
+                                bezpečnosti, abych zajistil, že vaše zkušenost s aplikací bude bezpečná a soukromá.</p>
+                        </div>
+                        <div>
+                            <h2>Změny v těchto zásadách ochrany osobních údajů</h2>
+                            <p>Tyto zásady ochrany osobních údajů mohu čas od času aktualizovat, aby odrážely změny v
+                                mých postupech nebo z jiných provozních, právních či regulačních důvodů. Doporučuji vám
+                                pravidelně kontrolovat tyto zásady kvůli případným změnám. O významných změnách vás budu
+                                informovat zveřejněním nových zásad ochrany osobních údajů na této stránce.</p>
+                        </div>
+                        <div>
+                            <h2>Kontaktujte mě</h2>
+                            <p>Pokud máte jakékoli dotazy nebo obavy týkající se těchto zásad ochrany osobních údajů
+                                nebo mých postupů při zpracování údajů, kontaktujte mě na:</p>
+                            <p>Max Juškevič<br/>Email: max.juskevic@example.com</p>
+                            <p>Děkuji, že používáte Výčetku!</p>
+                        </div>
+                        <div>
+                            <h1>Privacy Policy</h1>
+                            <p>Last updated: <span>{new Date().toLocaleDateString('en-GB')}</span></p>
+                        </div>
+                        <div>
+                            <h2>Introduction</h2>
+                            <p>Welcome to Výčetka! I, Max Juškevič, value your privacy and am committed to protecting
+                                your personal data. This Privacy Policy outlines the types of information I do and do
+                                not collect, as well as how I use and protect your data. By using my application, you
+                                agree to the practices described in this policy.</p>
+                        </div>
+                        <div>
+                            <h2>Data Collection and Usage</h2>
+                            <h3>No Data Collection</h3>
+                            <p>Výčetka does not collect, store, or process any personal data from its users. The
+                                application is designed to function without accessing any user information, ensuring
+                                complete privacy and anonymity.</p>
+                        </div>
+                        <div>
+                            <h2>Third-Party Services</h2>
+                            <p>Since Výčetka does not collect any data, it does not integrate with or use any
+                                third-party services that might collect or process personal information.</p>
+                        </div>
+                        <div>
+                            <h2>Data Security</h2>
+                            <h3>User Data Protection</h3>
+                            <p>While Výčetka does not collect personal data, I am committed to maintaining the highest
+                                standards of security to ensure that your experience with the application is safe and
+                                private.</p>
+                        </div>
+                        <div>
+                            <h2>Changes to This Privacy Policy</h2>
+                            <p>I may update my Privacy Policy from time to time to reflect changes in practices or for
+                                other operational, legal, or regulatory reasons. You are encouraged to review this
+                                policy periodically for any changes. I will notify you of any significant changes by
+                                posting the new Privacy Policy on this page.</p>
+                        </div>
+                        <div>
+                            <h2>Contact Me</h2>
+                            <p>If you have any questions or concerns regarding this Privacy Policy or my data practices,
+                                please contact me at:</p>
+                            <p>Max Juškevič<br/>Email: max.juskevic@example.com</p>
+                            <p>Thank you for choosing Výčetka!</p>
                         </div>
                     </div>
-                ))}
-            </div>
-        </TracingBeam>
+                </div>
+            </TracingBeam>
+        </div>
     );
 }
-
-const dummyContent = [
-    {
-        title: "Lorem Ipsum Dolor Sit Amet",
-        description: (
-            <>
-                <p>
-                    Sit duis est minim proident non nisi velit non consectetur. Esse
-                    adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-                    Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-                    incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-                    fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-                    nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-                    occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-                    officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-                    commodo et labore dolore commodo pariatur.
-                </p>
-                <p>
-                    Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-                    veniam in commodo id reprehenderit adipisicing. Proident duis
-                    exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-                </p>
-                <p>
-                    Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-                    reprehenderit deserunt amet laborum consequat adipisicing officia qui
-                    irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-                    Amet culpa officia aliquip deserunt veniam deserunt officia
-                    adipisicing aliquip proident officia sunt.
-                </p>
-            </>
-        ),
-        badge: "React",
-        image:
-            "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-        title: "Lorem Ipsum Dolor Sit Amet",
-        description: (
-            <>
-                <p>
-                    Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-                    deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-                    non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-                    sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-                    velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-                    commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-                </p>
-                <p>
-                    In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-                    veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-                    reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-                    cillum ut mollit.
-                </p>
-            </>
-        ),
-        badge: "Changelog",
-        image:
-            "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-        title: "Lorem Ipsum Dolor Sit Amet",
-        description: (
-            <>
-                <p>
-                    Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-                    deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-                    non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-                    sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-                    velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-                    commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-                </p>
-            </>
-        ),
-        badge: "Launch Week",
-        image:
-            "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-];
