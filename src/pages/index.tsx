@@ -1,10 +1,9 @@
-"use client";
 import React from "react";
 import {SparklesCore} from "@/components/ui/Sparkles";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   return (
       <>
           <div className="h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -21,7 +20,7 @@ export default function Home() {
           </div>
           <div className="border-t border-t-gray-300 flex md:justify-evenly flex-row bg-black z-10 p-4 text-gray-300">
               <p className="hidden md:flex text-sm md:text-lg py-2">&copy; 2024 Max Juškevič. Všechna práva vyhrazena.</p>
-              <Link href="https://www.juskevic.com/">
+              <Link href="/src/pages/privacy">
                   <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-gray-300 dark:text-white text-black rounded-full font-bold transform hover:-translate-y-1 transition duration-400">
                       Ochrana soukromí
                   </button>
@@ -30,3 +29,5 @@ export default function Home() {
       </>
   );
 }
+
+export default Home;
