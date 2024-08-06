@@ -4,9 +4,9 @@
 
 @font-face {
     font-family: 'DigitalCards';
-    src: url("/public/fonts/DigitalCards-Demo.ttf");
+    src: url("../../public/fonts/DigitalCards-Demo.ttf");
 }
 
-#tsparticlesfullpage {
+h1 {
     font-family: "DigitalCards", sans-serif;
 }

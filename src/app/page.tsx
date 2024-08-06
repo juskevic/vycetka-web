@@ -17,7 +17,7 @@ export default function Home() {
                 particleColor="#FFFFFF"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold text-center text-white relative z-20">
+          <h1 className="text-2xl md:text-5xl xl:text-7xl font-bold text-center text-white relative z-20">
             Výčetka
           </h1>
         </div>
