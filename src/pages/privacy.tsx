@@ -12,13 +12,11 @@ export default function PrivacyPage() {
     return (
         <div className="bg-black">
             <TracingBeam>
-                <div className="flex justify-center max-w-2xl mx-auto p-10 pt-20 text-gray-200">
+                <div className="flex justify-center max-w-2xl mx-auto p-12 md:p-0 pt-20 text-gray-200">
                     <div className="flex flex-col gap-7 flex-wrap">
                         <div className="flex justify-end text-gray-200">
-                            <Link href="/">
-                                <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-gray-300 dark:text-white text-black rounded-full font-bold transform hover:-translate-y-1 transition duration-400">
-                                    Zpátky / Go back
-                                </button>
+                            <Link href="/" className="underline text-lg">
+                                Zpátky / Go back
                             </Link>
                         </div>
                         <div className={ySpacing}>
