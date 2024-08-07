@@ -12,7 +12,7 @@ export default function PrivacyPage() {
     return (
         <div className="bg-black">
             <TracingBeam>
-                <div className="flex justify-center max-w-2xl mx-auto p-12 md:p-0 pt-20 text-gray-200">
+                <div className="flex justify-center max-w-2xl mx-auto p-12 md:p-0 md:pt-20 text-gray-200">
                     <div className="flex flex-col gap-7 flex-wrap">
                         <div className="flex justify-end text-gray-200">
                             <Link href="/" className="underline text-lg">
