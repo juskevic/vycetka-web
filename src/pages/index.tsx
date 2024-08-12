@@ -21,7 +21,7 @@ const Home = () => {
               </div>
           </div>
           <div className="border-t border-t-gray-300 flex md:justify-evenly flex-col md:flex-row bg-black z-10 p-4 text-gray-300">
-              <p className="md:text-lg py-2 md:py-0">&copy; 2024 Max Juškevič. Všechna práva vyhrazena.</p>
+              <p className="md:text-lg py-2 md:py-0">&copy; 2024 Max Juškevič. CC BY 4.0. License</p>
               <Link href="/privacy" className="underline md:text-lg">
                   Ochrana soukromí
               </Link>
